@@ -14,7 +14,6 @@ export const Container = styled.div<ContainerProps> `
     height:140vh;
     animation: ${BackgroundAnimation} 5s infinite;
     animation-direction:alternate;
-    
 `
 
 export const Content = styled.main `
@@ -34,8 +33,12 @@ export const Content = styled.main `
     }
     
 `
-export const InputContainer = styled.div `
-    margin:5px 0;
+interface InputContainer {
+    isOkButtonDisabled:boolean
+}
+
+export const InputContainer = styled.div<InputContainer> `
+    margin:10px 0;
     width:100%;
     height:50px;
     max-width:550px;
@@ -60,12 +63,24 @@ export const InputContainer = styled.div `
         flex:1;
         background-color:#7D7D7D;
         border:none;
-        color:#FFF;
+        display:flex;
+        justify-content:center;
+        align-items:center;
         font-size:30px;
         text-transform:uppercase;
         cursor:pointer;
         border-radius:5px;
         border-top-left-radius:0;
         border-bottom-left-radius:0;
+        transition:background-color .2s ease-in;
+        a {
+            color:#FFF;
+            text-decoration:none;
+        }
+        :hover {
+            background-color:${({isOkButtonDisabled}) => isOkButtonDisabled ? '#CC0915' : '#00D903'};
+            cursor:${({isOkButtonDisabled}) =>  isOkButtonDisabled ? 'not-allowed' : 'pointer'};
+        }
+        
     }
 `

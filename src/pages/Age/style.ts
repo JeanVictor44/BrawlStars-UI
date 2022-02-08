@@ -14,7 +14,10 @@ export const Container = styled.div<ContainerProps> `
     animation-direction:alternate;
     
 `
-export const Content = styled.main `
+interface ContentProps {
+    isConfirmButtonDisabled: boolean
+}
+export const Content = styled.main <ContentProps>`
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -28,10 +31,20 @@ export const Content = styled.main `
         border:1px solid #000;
         font-size:20px;
         cursor:pointer;
-        color:#FFF;
         border-radius:5px;
         text-transform:uppercase;
         font-weight:bold;
+        transition:background-color .2s ease-in;
+        :disabled {
+            cursor:not-allowed;
+        }
+        :hover {
+            background-color:${({isConfirmButtonDisabled}) => isConfirmButtonDisabled ? '#CC0915' : '#00D903'};
+        }
+        a {
+            color:#FFF;
+            text-decoration:none;
+        }
     }
 
     h1 {
@@ -103,6 +116,16 @@ export const AgeSlider = styled.div `
 export const SliderBox = styled.div `
         width:100%;
         position:relative;
+        
+        /* img {
+            width:40px;
+            position:absolute;    
+            top:50%;
+            transform:translateY(-50%);
+            &:first-of-type {
+                transform:scaleX(-1);
+            }
+        } */
 `
 
 interface DisplayAgeProps {
@@ -113,13 +136,13 @@ export const DisplayAge = styled.output<DisplayAgeProps> `
     position:absolute;
     top:-100px;
     background-color:#FFF;
-    width:50px;
-    height:45px;
+    width:70px;
+    height:55px;
     display:flex;
     justify-content:center;
     align-items:center;
-    
-    left:${({sliderValue}) => `calc(${sliderValue}% + ( 8px - ${sliderValue} * 0.15px))` } ;
+    border-radius:10px;
+    left:${({sliderValue}) => `calc(${sliderValue}% + ( 42.5px - ${sliderValue} * 0.80px))` } ;
     transform:translateX(-50%);
     ::after {
         content: "";
@@ -127,11 +150,12 @@ export const DisplayAge = styled.output<DisplayAgeProps> `
         width: 0px;
         height: 0px;
 
+        /* Triangle */
         border-top:10px solid #FFF;
         border-left:10px solid transparent;
         border-right:10px solid transparent;
 
-        bottom : -15px;
+        bottom : -10px;
         left: 50%;
         transform:translateX(-50%);
     }
