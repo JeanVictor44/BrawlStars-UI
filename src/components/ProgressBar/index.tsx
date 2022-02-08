@@ -21,7 +21,7 @@ export const ProgressBar = ({progressColor, width, height, progressType=false}: 
             {
                     progressType === 'trophy' ? (
                         <div>                    
-                            <img src={trophyIcon}/>
+                            <img src={trophyIcon} alt='Trophy icon'/>
                             <span>576</span>
                         </div>
                     ) 
