@@ -15,9 +15,9 @@ export const Name = () => {
                 <h1>Bem-vindo ao Brawl Stars!</h1>
                 <p>Qual é o seu nome?</p>
                 <S.InputContainer isOkButtonDisabled={userName.length === 0}>
-                    <input type="text" placeholder="Insira seu nome aqui" maxLength={12} onChange={(ev) => setUserNameData(ev.target.value)}/>
-                    <button>
-                        <Link to={userName.length > 0 ? '/age' : ''} >
+                    <input type="text" aria-label="name-input" placeholder="Insira seu nome aqui" maxLength={12} onChange={(ev) => setUserNameData(ev.target.value)}/>
+                    <button >
+                        <Link aria-label="confirm-link" to={userName.length > 0 ? '/age' : ''} >
                             ok
                         </Link>
                     </button>
