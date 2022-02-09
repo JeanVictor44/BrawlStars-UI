@@ -9,7 +9,48 @@ import { Name } from '..'
 import { UserDataProvider } from '../../../contexts/userData'
 
 describe("Name page tests", () => {
-    it("should redirect the user to the /age url when he types the name and clicks the link", () => {
+    
+    it('Title 1 must contain "Bem-vindo ao Brawl Stars!" text', () => {
+        render((
+            <Router>
+                <UserDataProvider>
+                    <Name />
+                </UserDataProvider>
+            </Router>
+        ))
+
+        const heading1 = screen.getByText(/Bem-vindo ao Brawl Stars!/i)
+
+        expect(heading1).toBeInTheDocument() 
+    })
+
+    it('Paragraph must contain "Qual é o seu nome?" text', () => {
+        render((
+            <Router>
+                <UserDataProvider>
+                    <Name />
+                </UserDataProvider>
+            </Router>
+        ))
+
+        const paragraph = screen.getByText(/Qual é o seu nome?/i)
+
+        expect(paragraph).toBeInTheDocument()
+    })
+    
+    it('Redirect link must have "ok" text', () => {
+        render((
+            <Router>
+                <UserDataProvider>
+                    <Name />
+                </UserDataProvider>
+            </Router>
+        ))
+        const link = screen.getByText(/ok/i)
+        expect(link).toBeInTheDocument()
+    })
+
+    it('should redirect the user to the /age url when he types the name and clicks the link', () => {
         render((
             <Router>
                 <UserDataProvider>
@@ -26,6 +67,7 @@ describe("Name page tests", () => {
         const currentLocation = window.location.pathname
         expect(currentLocation).toBe('/age') 
     })
+
     it('Should not redirect the user to the /age when he does not fill in the input name and click on the link', () => {
         render((
             <Router>
