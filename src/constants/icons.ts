@@ -10,6 +10,7 @@ import plusIcon from '../assets/icons/plus.png'
 import rankIcon from '../assets/icons/rank.png'
 import passIcon from '../assets/icons/pass.png'
 import gameModeIcon from '../assets/icons/game-mode.png'
+import beaIcon from "../assets/icons/bea.png"
 
 const ICONS = {
     TROPHY: trophyIcon,
@@ -23,7 +24,8 @@ const ICONS = {
     PLUS: plusIcon,
     RANK: rankIcon,
     PASS: passIcon,
-    GAME_MODE:gameModeIcon
+    GAME_MODE:gameModeIcon,
+    BEA: beaIcon
 }as const
 
 export default ICONS
