@@ -1,20 +1,8 @@
 import * as S from './style'
 import registerBg from '../../assets/backgrounds/register-bg.svg'
-import mikeIcon from '../../assets/icons/mike.svg'
 import useAuth from '../../contexts/auth'
-import trophyIcon from '../../assets/icons/trophy.png'
-import leagueIcon from '../../assets/icons/league.png'
-import rewardProfileIcon from '../../assets/icons/reward-profile.png'
-import gemIcon from '../../assets/icons/gem.png'
-import coinIcon from '../../assets/icons/coin.png'
-import powerPointIcon from '../../assets/icons/power-point.png'
 import { ProgressBar } from '../../components/ProgressBar'
-import { BRAWLERS_ANIMATION, CARD_OPTIONS } from '../../constants'
-import searchIcon from '../../assets/icons/search.png'
-import plusIcon from '../../assets/icons/plus.png'
-import rankIcon from '../../assets/icons/rank.png'
-import passIcon from '../../assets/icons/pass.png'
-import gameModeIcon from '../../assets/icons/game-mode.png'
+import { BRAWLERS_ANIMATION, CARD_OPTIONS, ICONS} from '../../constants'
 import { Link } from 'react-router-dom'
 import { Progress } from '../../components/ProgressBar/style'
 
@@ -26,39 +14,39 @@ export const Principal = () => {
             <S.Header>
                 <S.ProfileInfosContainer >
                     <S.ProfileCard>
-                        <img src={mikeIcon} alt='Profile icon'/>
+                        <img src={ICONS.MIKE} alt='Profile icon'/>
                         <p>{userName}</p>   
                     </S.ProfileCard>
                     <S.ProfileCardTrophies>
                         <header> 
-                            <img src={leagueIcon} />
+                            <img src={ICONS.LEAGUE} alt="League icon"/>
                             <div>
-                                <img src={trophyIcon} />
+                                <img src={ICONS.TROPHY} alt="Trophy icon" />
                                 <span>999</span>
                             </div>
                         </header>
                         <div>
                             <ProgressBar width={'80%'} height={'25px'} progressColor='orange' />
-                            <img src={rewardProfileIcon} />
+                            <img src={ICONS.REWARD_PROFILE} alt="Reward profile icon"/>
                         </div>
                     </S.ProfileCardTrophies>
                 </S.ProfileInfosContainer>
                 <S.PlayerResourcesContainer>
                     <S.PlayerResource>
                         <div>
-                            <img src={powerPointIcon} alt="coin" />
+                            <img src={ICONS.POWER_POINT} alt="Power point icon" />
                         </div>
                         <span>999</span>
                     </S.PlayerResource>
                     <S.PlayerResource>
                         <div>
-                            <img src={coinIcon} alt="coin" />
+                            <img src={ICONS.COIN} alt="Coin icon" />
                         </div>
                         <span>999</span>
                     </S.PlayerResource>
                     <S.PlayerResource>
                         <div>
-                            <img src={gemIcon} alt="coin" />
+                            <img src={ICONS.GEM} alt="Gem icon" />
                         </div>
                         <span>30</span>
                     </S.PlayerResource>
@@ -72,15 +60,15 @@ export const Principal = () => {
             <S.Main>
                 <S.SideOptions>
                     <S.CardOption to="/shop">
-                        <img src={CARD_OPTIONS.SHOP} />
+                        <img src={CARD_OPTIONS.SHOP} alt="Shop card"/>
                         <p>shop</p>
                     </S.CardOption>
                     <S.CardOption to="/brawlers">
-                        <img src={CARD_OPTIONS.BRAWLERS} />
+                        <img src={CARD_OPTIONS.BRAWLERS} alt="Brawlers card"/>
                         <p>brawlers</p>
                     </S.CardOption>
                     <S.CardOption to="/news">
-                        <img src={CARD_OPTIONS.NEWS} />
+                        <img src={CARD_OPTIONS.NEWS} alt="News card"/>
                         <p>news</p>
                     </S.CardOption>
                 </S.SideOptions>
@@ -88,34 +76,34 @@ export const Principal = () => {
                 <S.BrawlerView>
                     <S.Actions>
                         <S.Action>
-                            <img src={plusIcon} />
+                            <img src={ICONS.PLUS} alt="Plus icon"/>
                         </S.Action>
                         <S.Action>
-                            <img src={searchIcon} />
+                            <img src={ICONS.SEARCH} alt="Search icon"/>
                         </S.Action>
                     </S.Actions>
                     <S.Brawler>
                             <S.Rank>
                                 <div>
-                                    <img src={rankIcon} />
+                                    <img src={ICONS.RANK} alt="rankIcon"/>
                                 </div>
                                 <ProgressBar width={'250px'} height={'40px'} progressColor='orange' progressType='trophy' />
                             </S.Rank>
-                        <img src={BRAWLERS_ANIMATION._8bit} />
+                        <img src={BRAWLERS_ANIMATION._8bit} alt="Brawler image" />
                     </S.Brawler>
                 </S.BrawlerView>
 
                 <S.SideOptions>
                     <S.CardOption to="/friends">
-                        <img src={CARD_OPTIONS.FRIENDS} />
+                        <img src={CARD_OPTIONS.FRIENDS} alt="friends card"/>
                         <p>friend</p>
                     </S.CardOption>
                     <S.CardOption to="/club">
-                        <img src={CARD_OPTIONS.CLUB} />
+                        <img src={CARD_OPTIONS.CLUB} alt="Club card"/>
                         <p>club</p>
                     </S.CardOption>
                     <S.CardOption to="/chat">
-                        <img src={CARD_OPTIONS.CHAT} />
+                        <img src={CARD_OPTIONS.CHAT} alt="Chat card"/>
                         <p>chat</p>
                     </S.CardOption>
                 </S.SideOptions>
@@ -124,7 +112,7 @@ export const Principal = () => {
                 
                 <S.BrawlPass>
                     <S.PassIcon>
-                        <img src={passIcon} />
+                        <img src={ICONS.PASS} alt="Pass icon"/>
                         <span>Brawl Pass</span>
                     </S.PassIcon>
                     <ProgressBar width='80%' height="35px" progressColor='yellow' progressType='pass'/>
@@ -134,7 +122,7 @@ export const Principal = () => {
                     <S.ContainerEventButton>
                         <S.EventButton>
                             <S.EventIcon>
-                                <img src={gameModeIcon} />
+                                <img src={ICONS.GAME_MODE} alt="Game mode icon"/>
                             </S.EventIcon>
                             <S.EventDetails>
                                 <p>Brawl ball</p>
