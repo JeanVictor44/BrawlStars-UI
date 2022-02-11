@@ -9,7 +9,6 @@ import { Name } from '..'
 import { UserDataProvider } from '../../../contexts/userData'
 
 describe("Name page tests", () => {
-    
     it('Title 1 must contain "Bem-vindo ao Brawl Stars!" text', () => {
         render((
             <Router>
