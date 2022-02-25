@@ -7,7 +7,6 @@ import useUserData from '../../contexts/userData'
 export const Name = () => {
     const { setUserNameData, userData } = useUserData()
     const { userName } = userData
-
     return (
         <S.Container background={registerBg}>
             <ButtonId />

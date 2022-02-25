@@ -76,6 +76,12 @@ export const InputContainer = styled.div<InputContainer> `
         a {
             color:#FFF;
             text-decoration:none;
+            display:flex;
+            width:100%;
+            height:100%;
+            justify-content:center;
+            align-items:center;
+
         }
         :hover {
             background-color:${({isOkButtonDisabled}) => isOkButtonDisabled ? '#CC0915' : '#00D903'};

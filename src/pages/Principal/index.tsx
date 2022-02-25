@@ -2,13 +2,14 @@ import * as S from './style'
 import registerBg from '../../assets/backgrounds/register-bg.svg'
 import useAuth from '../../contexts/auth'
 import { ProgressBar } from '../../components/ProgressBar'
-import { BRAWLERS_ANIMATION, CARD_OPTIONS, ICONS} from '../../constants'
+import { CARD_OPTIONS, ICONS} from '../../constants'
 import { Link } from 'react-router-dom'
-import { Progress } from '../../components/ProgressBar/style'
+import { getBrawlerAnimation } from '../../utils'
 
 export const Principal = () => {
     const { userData: { userName } } = useAuth()
     
+   
     return (
         <S.Container background={registerBg}>
             <S.Header>
@@ -89,7 +90,7 @@ export const Principal = () => {
                                 </div>
                                 <ProgressBar width={'250px'} height={'40px'} progressColor='orange' progressType='trophy' />
                             </S.Rank>
-                        <img src={BRAWLERS_ANIMATION._8bit} alt="Brawler image" />
+                        <img src={getBrawlerAnimation('Leon')} alt="Brawler image" />
                     </S.Brawler>
                 </S.BrawlerView>
 

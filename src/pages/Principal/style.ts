@@ -228,7 +228,7 @@ export const Brawler = styled.div `
         margin:0 auto;    
     }
     > img {
-      width:400px;
+      width:320px;
     }
 `
 export const Rank = styled.div `

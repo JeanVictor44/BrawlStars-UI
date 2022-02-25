@@ -8,7 +8,7 @@ import {
 } from 'react'
 import { UserData } from '../common/types'
 
-// useState type
+// useState type 
 export interface AuthState{
     signed: boolean,
     userData: UserData
