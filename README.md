@@ -47,16 +47,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Criar página para registro do nome 
-- [ ] Criar página para escolha do ícone de perfil
-- [ ] Página para escolha do brawler da página principal
 - [x] Criar página para registro da idade
 - [x] Criar página principal 
-- [ ] Desenvolver Página para listar os brawlers e suas habilidades
-- [ ] Construir página para exibir os players do jogo 
-- [ ] Página para mostrar os clubes existentes no jogo
-- [ ] Adicionar animação nos brawlers da página principal
-- [ ] Acrescentar sons
-- [ ] Animar a página principal com Framer Motion 
 
 ## Pré-requisitos
 
